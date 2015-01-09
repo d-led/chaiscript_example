@@ -2,6 +2,7 @@ language: cpp
 
 compiler:
   - clang
+  - gcc
 
 script:
   - make -C Build/linux/gmake config=release
