@@ -6,9 +6,14 @@ std::string helloWorld(const std::string &t_name) {
 
 class test {
 public:
-    test(const test&) = default;
+    // test(test&&) {
+    //     std::cout << __FUNCTION__ << "(test&&)" << std::endl;        
+    // }
+    test(const test&) {
+        std::cout << __FUNCTION__ << "(const test&)" << std::endl;        
+    }
     test() {
-        std::cout << __FUNCTION__ << std::endl;
+        std::cout << __FUNCTION__ << "()" << std::endl;
     }
     ~test() {
         std::cout << __FUNCTION__ << std::endl;
@@ -31,6 +36,8 @@ int main() {
 
         chai.eval("print(helloWorld(\"Bob\"));");
         chai.eval("var t = test(); t.foo();");
+        chai.eval("var t2 = t; t2.foo();");
+        chai.eval("def test::bar() { print(\"bar!\"); } t.bar();");
     }
     catch (std::exception& e) {
         std::cerr << e.what() << std::endl;

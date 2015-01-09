@@ -44,6 +44,11 @@ make_shared_lib('chaiscript_stdlib',{
 
 use_standard('c++0x')
 
+----------------------
+configuration 'macosx'
+	targetextension '.so'
+configuration '*'
+
 targetname('chaiscript_stdlib-'..chaiscript_version())
 
 ----------------------------------------
