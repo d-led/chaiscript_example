@@ -18,7 +18,6 @@ public:
     }
 };
 
-// adopted from the docs
 int main() {
     try {
         chaiscript::ChaiScript chai;
@@ -30,7 +29,7 @@ int main() {
             .add(chaiscript::fun(&test::foo), "foo")
         ;
 
-        chai.eval("puts(helloWorld(\"Bob\"));");
+        chai.eval("print(helloWorld(\"Bob\"));");
         chai.eval("var t = test(); t.foo();");
     }
     catch (std::exception& e) {

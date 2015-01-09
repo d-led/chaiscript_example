@@ -38,15 +38,22 @@ end
 make_shared_lib('chaiscript_stdlib',{
 	'ChaiScript/src/chaiscript_stdlib.cpp'
 })
+use_standard('c++11')
 targetname('chaiscript_stdlib-'..chaiscript_version())
 
 make_console_app('chaiscript_example', {
 	'src/*.*'
 })
-pchheader 'afxwin.h'
-pchsource 'src/afxwin.cpp'
+use_standard('c++11')
+configuration 'windows'
+	pchheader 'afxwin.h'
+	pchsource 'src/afxwin.cpp'
+configuration '*'
+
+configuration 'linux'
+	links 'dl'
+configuration '*'
 
 links 'chaiscript_stdlib'
 
-use_standard('c++11')
 run_target_after_build()
