@@ -4,6 +4,13 @@ make_solution 'chaiscript_example'
 
 platforms { "native","x32", "x64" }
 
+configuration 'vs*'
+	buildoptions {
+		'/bigobj',
+		'-Zm150'
+	}
+configuration '*'
+
 includedirs {
 	'ChaiScript/include'
 }
@@ -32,13 +39,13 @@ make_shared_lib('chaiscript_stdlib',{
 	'ChaiScript/src/chaiscript_stdlib.cpp'
 })
 targetname('chaiscript_stdlib-'..chaiscript_version())
-configuration 'vs*'
-	buildoptions '/bigobj'
-configuration '*'
 
 make_console_app('chaiscript_example', {
-	'src/test.cpp'
+	'src/*.*'
 })
+pchheader 'afxwin.h'
+pchsource 'src/afxwin.cpp'
+
 links 'chaiscript_stdlib'
 
 use_standard('c++11')
