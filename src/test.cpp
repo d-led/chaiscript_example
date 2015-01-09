@@ -6,9 +6,14 @@ std::string helloWorld(const std::string &t_name) {
 
 class test {
 public:
-    test(const test&) = default;
+    // test(test&&) {
+    //     std::cout << __FUNCTION__ << "(test&&)" << std::endl;        
+    // }
+    test(const test&) {
+        std::cout << __FUNCTION__ << "(const test&)" << std::endl;        
+    }
     test() {
-        std::cout << __FUNCTION__ << std::endl;
+        std::cout << __FUNCTION__ << "()" << std::endl;
     }
     ~test() {
         std::cout << __FUNCTION__ << std::endl;
