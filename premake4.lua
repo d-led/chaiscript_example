@@ -4,12 +4,14 @@ make_solution 'chaiscript_example'
 
 platforms { "native","x32", "x64" }
 
+-------------------
 configuration 'vs*'
 	buildoptions {
 		'/bigobj',
 		'-Zm150'
 	}
 configuration '*'
+-------------------
 
 includedirs {
 	'ChaiScript/include'
@@ -35,16 +37,28 @@ local function chaiscript_version()
 	return version
 end
 
+-------------------------------------
 make_shared_lib('chaiscript_stdlib',{
 	'ChaiScript/src/chaiscript_stdlib.cpp'
 })
+
 use_standard('c++0x')
+
+----------------------
+configuration 'macosx'
+	targetextension '.so'
+configuration '*'
+
 targetname('chaiscript_stdlib-'..chaiscript_version())
 
+----------------------------------------
 make_console_app('chaiscript_example', {
 	'src/*.*'
 })
+
 use_standard('c++0x')
+
+-----------------------
 configuration 'windows'
 	pchheader 'afxwin.h'
 	pchsource 'src/afxwin.cpp'

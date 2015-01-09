@@ -38,9 +38,14 @@ template <typename T> int countable<T>::count(0);
 
 class test : public countable<test> {
 public:
-    test(const test&) = default;
+    // test(test&&) {
+    //     std::cout << __FUNCTION__ << "(test&&)" << std::endl;        
+    // }
+    test(const test&) {
+        std::cout << __FUNCTION__ << "(const test&)" << std::endl;        
+    }
     test() {
-        std::cout << __FUNCTION__ << std::endl;
+        std::cout << __FUNCTION__ << "()" << std::endl;
     }
     ~test() {
         std::cout << __FUNCTION__ << std::endl;
