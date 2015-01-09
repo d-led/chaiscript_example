@@ -4,7 +4,39 @@ std::string helloWorld(const std::string &t_name) {
     return "Hello " + t_name + "!";
 }
 
-class test {
+template <typename T>
+class countable
+{
+    static int count;
+
+    int id;
+
+public:
+    countable() :
+        id(count + 1)
+    {
+        ++count;
+    }
+
+    countable(countable&&) :
+        id(count + 1)
+    {
+        ++count;
+    }
+
+    countable(const countable&) :
+        id(count + 1)
+    {
+        ++count;
+    }
+public:
+    int my_id() const {
+        return id;
+    }
+};
+template <typename T> int countable<T>::count(0);
+
+class test : public countable<test> {
 public:
     test(const test&) = default;
     test() {
