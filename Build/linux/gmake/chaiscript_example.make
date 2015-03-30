@@ -30,7 +30,7 @@ ifeq ($(config),debug32)
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -L. -L../../../bin/linux/gmake/x32/Debug -m32 -L/usr/lib32
-  LDDEPS    += ../../../bin/linux/gmake/x32/Debug/libchaiscript_stdlib-5.5.1.so
+  LDDEPS    += ../../../bin/linux/gmake/x32/Debug/libchaiscript_stdlib-5.6.0.so
   LIBS      += $(LDDEPS) -ldl
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
@@ -54,7 +54,7 @@ ifeq ($(config),release32)
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -L. -L../../../bin/linux/gmake/x32/Release -s -m32 -L/usr/lib32
-  LDDEPS    += ../../../bin/linux/gmake/x32/Release/libchaiscript_stdlib-5.5.1.so
+  LDDEPS    += ../../../bin/linux/gmake/x32/Release/libchaiscript_stdlib-5.6.0.so
   LIBS      += $(LDDEPS) -ldl
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
@@ -78,7 +78,7 @@ ifeq ($(config),debug64)
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -L. -L../../../bin/linux/gmake/x64/Debug -m64 -L/usr/lib64
-  LDDEPS    += ../../../bin/linux/gmake/x64/Debug/libchaiscript_stdlib-5.5.1.so
+  LDDEPS    += ../../../bin/linux/gmake/x64/Debug/libchaiscript_stdlib-5.6.0.so
   LIBS      += $(LDDEPS) -ldl
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
@@ -102,7 +102,7 @@ ifeq ($(config),release64)
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -L. -L../../../bin/linux/gmake/x64/Release -s -m64 -L/usr/lib64
-  LDDEPS    += ../../../bin/linux/gmake/x64/Release/libchaiscript_stdlib-5.5.1.so
+  LDDEPS    += ../../../bin/linux/gmake/x64/Release/libchaiscript_stdlib-5.6.0.so
   LIBS      += $(LDDEPS) -ldl
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
@@ -126,7 +126,7 @@ ifeq ($(config),debug)
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -L. -L../../../bin/linux/gmake
-  LDDEPS    += ../../../bin/linux/gmake/libchaiscript_stdlib-5.5.1.so
+  LDDEPS    += ../../../bin/linux/gmake/libchaiscript_stdlib-5.6.0.so
   LIBS      += $(LDDEPS) -ldl
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
@@ -150,7 +150,7 @@ ifeq ($(config),release)
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -L. -L../../../bin/linux/gmake -s
-  LDDEPS    += ../../../bin/linux/gmake/libchaiscript_stdlib-5.5.1.so
+  LDDEPS    += ../../../bin/linux/gmake/libchaiscript_stdlib-5.6.0.so
   LIBS      += $(LDDEPS) -ldl
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS

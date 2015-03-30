@@ -22,7 +22,7 @@ endif
 ifeq ($(config),debug32)
   OBJDIR     = ../../../obj/linux/gmake/x32/Debug/chaiscript_stdlib/x32
   TARGETDIR  = ../../../bin/linux/gmake/x32/Debug
-  TARGET     = $(TARGETDIR)/libchaiscript_stdlib-5.5.1.so
+  TARGET     = $(TARGETDIR)/libchaiscript_stdlib-5.6.0.so
   DEFINES   += -DDEBUG -D_DEBUG
   INCLUDES  += -I../../../ChaiScript/include
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
@@ -44,7 +44,7 @@ endif
 ifeq ($(config),release32)
   OBJDIR     = ../../../obj/linux/gmake/x32/Release/chaiscript_stdlib/x32
   TARGETDIR  = ../../../bin/linux/gmake/x32/Release
-  TARGET     = $(TARGETDIR)/libchaiscript_stdlib-5.5.1.so
+  TARGET     = $(TARGETDIR)/libchaiscript_stdlib-5.6.0.so
   DEFINES   += -DRELEASE
   INCLUDES  += -I../../../ChaiScript/include
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
@@ -66,7 +66,7 @@ endif
 ifeq ($(config),debug64)
   OBJDIR     = ../../../obj/linux/gmake/x64/Debug/chaiscript_stdlib/x64
   TARGETDIR  = ../../../bin/linux/gmake/x64/Debug
-  TARGET     = $(TARGETDIR)/libchaiscript_stdlib-5.5.1.so
+  TARGET     = $(TARGETDIR)/libchaiscript_stdlib-5.6.0.so
   DEFINES   += -DDEBUG -D_DEBUG
   INCLUDES  += -I../../../ChaiScript/include
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
@@ -88,7 +88,7 @@ endif
 ifeq ($(config),release64)
   OBJDIR     = ../../../obj/linux/gmake/x64/Release/chaiscript_stdlib/x64
   TARGETDIR  = ../../../bin/linux/gmake/x64/Release
-  TARGET     = $(TARGETDIR)/libchaiscript_stdlib-5.5.1.so
+  TARGET     = $(TARGETDIR)/libchaiscript_stdlib-5.6.0.so
   DEFINES   += -DRELEASE
   INCLUDES  += -I../../../ChaiScript/include
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
@@ -110,7 +110,7 @@ endif
 ifeq ($(config),debug)
   OBJDIR     = ../../../obj/linux/gmake/Native/Debug/chaiscript_stdlib
   TARGETDIR  = ../../../bin/linux/gmake
-  TARGET     = $(TARGETDIR)/libchaiscript_stdlib-5.5.1.so
+  TARGET     = $(TARGETDIR)/libchaiscript_stdlib-5.6.0.so
   DEFINES   += -DDEBUG -D_DEBUG
   INCLUDES  += -I../../../ChaiScript/include
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
@@ -132,7 +132,7 @@ endif
 ifeq ($(config),release)
   OBJDIR     = ../../../obj/linux/gmake/Native/Release/chaiscript_stdlib
   TARGETDIR  = ../../../bin/linux/gmake
-  TARGET     = $(TARGETDIR)/libchaiscript_stdlib-5.5.1.so
+  TARGET     = $(TARGETDIR)/libchaiscript_stdlib-5.6.0.so
   DEFINES   += -DRELEASE
   INCLUDES  += -I../../../ChaiScript/include
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
