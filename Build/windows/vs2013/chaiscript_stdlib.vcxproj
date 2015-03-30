@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug native|Win32">
       <Configuration>Debug native</Configuration>
@@ -103,42 +103,42 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\..\bin\windows\vs2013\native\Debug\</OutDir>
     <IntDir>..\..\..\obj\windows\vs2013\native\Debug\chaiscript_stdlib\</IntDir>
-    <TargetName>chaiscript_stdlib-5.5.1</TargetName>
+    <TargetName>chaiscript_stdlib-5.6.0</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\..\bin\windows\vs2013\x32\Debug\</OutDir>
     <IntDir>..\..\..\obj\windows\vs2013\x32\Debug\chaiscript_stdlib\</IntDir>
-    <TargetName>chaiscript_stdlib-5.5.1</TargetName>
+    <TargetName>chaiscript_stdlib-5.6.0</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\..\bin\windows\vs2013\x64\Debug\</OutDir>
     <IntDir>..\..\..\obj\windows\vs2013\x64\Debug\chaiscript_stdlib\</IntDir>
-    <TargetName>chaiscript_stdlib-5.5.1</TargetName>
+    <TargetName>chaiscript_stdlib-5.6.0</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release native|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>..\..\..\bin\windows\vs2013\native\Release\</OutDir>
     <IntDir>..\..\..\obj\windows\vs2013\native\Release\chaiscript_stdlib\</IntDir>
-    <TargetName>chaiscript_stdlib-5.5.1</TargetName>
+    <TargetName>chaiscript_stdlib-5.6.0</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>..\..\..\bin\windows\vs2013\x32\Release\</OutDir>
     <IntDir>..\..\..\obj\windows\vs2013\x32\Release\chaiscript_stdlib\</IntDir>
-    <TargetName>chaiscript_stdlib-5.5.1</TargetName>
+    <TargetName>chaiscript_stdlib-5.6.0</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>..\..\..\bin\windows\vs2013\x64\Release\</OutDir>
     <IntDir>..\..\..\obj\windows\vs2013\x64\Release\chaiscript_stdlib\</IntDir>
-    <TargetName>chaiscript_stdlib-5.5.1</TargetName>
+    <TargetName>chaiscript_stdlib-5.6.0</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug native|Win32'">
@@ -151,14 +151,10 @@
       <Optimization>Disabled</Optimization>
       <AdditionalOptions>/bigobj -Zm150 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\ChaiScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>..\..\..\bin\windows\vs2013\native\Debug\chaiscript_stdlib-5.5.1.lib</ImportLibrary>
+      <ImportLibrary>..\..\..\bin\windows\vs2013\native\Debug\chaiscript_stdlib-5.6.0.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -171,14 +167,10 @@
       <Optimization>Disabled</Optimization>
       <AdditionalOptions>/bigobj -Zm150 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\ChaiScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>..\..\..\bin\windows\vs2013\x32\Debug\chaiscript_stdlib-5.5.1.lib</ImportLibrary>
+      <ImportLibrary>..\..\..\bin\windows\vs2013\x32\Debug\chaiscript_stdlib-5.6.0.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -191,14 +183,10 @@
       <Optimization>Disabled</Optimization>
       <AdditionalOptions>/bigobj -Zm150 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\ChaiScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>..\..\..\bin\windows\vs2013\x64\Debug\chaiscript_stdlib-5.5.1.lib</ImportLibrary>
+      <ImportLibrary>..\..\..\bin\windows\vs2013\x64\Debug\chaiscript_stdlib-5.6.0.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release native|Win32'">
@@ -214,16 +202,12 @@
       <StringPooling>true</StringPooling>
       <AdditionalOptions>/bigobj -Zm150 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\ChaiScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ImportLibrary>..\..\..\bin\windows\vs2013\native\Release\chaiscript_stdlib-5.5.1.lib</ImportLibrary>
+      <ImportLibrary>..\..\..\bin\windows\vs2013\native\Release\chaiscript_stdlib-5.6.0.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -239,16 +223,12 @@
       <StringPooling>true</StringPooling>
       <AdditionalOptions>/bigobj -Zm150 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\ChaiScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ImportLibrary>..\..\..\bin\windows\vs2013\x32\Release\chaiscript_stdlib-5.5.1.lib</ImportLibrary>
+      <ImportLibrary>..\..\..\bin\windows\vs2013\x32\Release\chaiscript_stdlib-5.6.0.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -264,16 +244,12 @@
       <StringPooling>true</StringPooling>
       <AdditionalOptions>/bigobj -Zm150 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\ChaiScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ImportLibrary>..\..\..\bin\windows\vs2013\x64\Release\chaiscript_stdlib-5.5.1.lib</ImportLibrary>
+      <ImportLibrary>..\..\..\bin\windows\vs2013\x64\Release\chaiscript_stdlib-5.6.0.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
