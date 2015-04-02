@@ -77,7 +77,12 @@ int main() {
         chai.eval("print(helloWorld(\"Bob\"));");
         chai.eval("var t = test(); t.foo();");
         chai.eval("var t2 = t; t2.foo();");
-        chai.eval("def test::bar() { print(\"bar![\"+this.my_id.to_string+\"]\"); } t.bar();");
+        chai.eval(R"(
+            def test::bar() {
+                print("bar![" + this.my_id.to_string + "]");
+            }
+            t.bar();
+        )");
     }
     catch (std::exception& e) {
         std::cerr << e.what() << std::endl;
